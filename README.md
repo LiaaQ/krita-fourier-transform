@@ -16,4 +16,4 @@ Mainly for learning purposes. I wanted to implement the math myself instead of r
 Very basic — expect slow performance on larger images.  
 Good enough for experimenting and understanding the transform process.
 
-![Result](./2d.png)
+![Result](./Pictures/2d.png)

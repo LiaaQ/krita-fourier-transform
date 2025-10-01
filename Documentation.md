@@ -12,9 +12,9 @@ After submission, a bug was found: the third dimension was not being correctly a
 Another fix addressed duplicate error messages when images larger than the allowed size were processed (based on feedback in *Grades*).  
 Changes in the documentation after the update are marked in *italics*.
 
-![image](2d.png)
+![image](./Pictures/2d.png)
 
-![video](2d.mp4)
+![video](./Pictures/2d.mp4)
 
 ---
 
@@ -40,10 +40,10 @@ The program will compute the FT and produce x folders with outputs.
 The first step is converting RGB images to grayscale. This uses weighted averages of R, G, and B to reflect human perception — e.g. green is perceived ~10× brighter than blue.  
 
 Psychological experiments determined exact weights for accurate brightness perception:  
-![RGB formula](./RGBtoGrayPsychologistsFormula.png)  
+![RGB formula](./Pictures/RGBtoGrayPsychologistsFormula.png)  
 
 Since the human eye is more sensitive to changes in dark regions, a linear approximation of gamma compression is used here, avoiding complexity:  
-![Gamma approximation](./RGBtoGrayLinearApproximation.png)
+![Gamma approximation](./Pictures/RGBtoGrayLinearApproximation.png)
 
 Source: [E2EML – Convert RGB to grayscale](https://e2eml.school/convert_rgb_to_grayscale#:~:text=An%20intuitive%20way%20to%20convert,into%20a%20reasonable%20gray%20approximation)
 
@@ -74,12 +74,12 @@ Returns the same components as 2D FT.
 
 ### Discrete Fourier Transform (DFT)
 Mathematical formula to decompose signals/images into base components:  
-![DFT](./DFTvzorec.png)  
+![DFT](./Pictures/DFTvzorec.png)  
 
 Because direct computation is slow, the **Fast Fourier Transform (FFT)** is often used. However, this plugin uses a hand-written DFT implementation for clarity.  
 For 2D/3D extension, additional variables are added:  
-![2D DFT](./2DDFTvzorec.png)  
-![3D DFT](./3DDFTvzorec.png)  
+![2D DFT](./Pictures/2DDFTvzorec.png)  
+![3D DFT](./Pictures/3DDFTvzorec.png)  
 
 Results are log-scaled with `log(1+val)` for visibility.
 
